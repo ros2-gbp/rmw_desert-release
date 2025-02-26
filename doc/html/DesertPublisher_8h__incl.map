@@ -1,0 +1,30 @@
+<map id="src/desert_classes/DesertPublisher.h" name="src/desert_classes/DesertPublisher.h">
+<area shape="rect" id="Node000001" title="Implementation of the Publisher structure for DESERT." alt="" coords="549,5,690,45"/>
+<area shape="rect" id="Node000002" href="$CBorStream_8h.html" title="Classes used to convert data types into a CBOR encoded stream." alt="" coords="494,167,606,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="612,47,590,94,563,155,558,153,585,92,608,45"/>
+<area shape="rect" id="Node000012" href="$MessageSerialization_8h.html" title="Namespace containing serialization functions." alt="" coords="599,93,773,119"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="637,44,669,81,665,84,633,47"/>
+<area shape="rect" id="Node000003" href="$TcpDaemon_8h.html" title="Class used to send and receive data from the DESERT socket." alt="" coords="5,240,116,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="494,191,130,243,129,237,493,185"/>
+<area shape="rect" id="Node000004" href="$TopicsConfig_8h.html" title="Class used to store configurations." alt="" coords="141,240,255,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="494,195,268,240,267,235,493,189"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="279,240,397,265"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="517,195,386,238,384,233,515,189"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="420,240,539,265"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="540,194,502,232,498,228,536,190"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="562,240,679,265"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="564,190,602,228,598,232,560,194"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="703,240,810,265"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="584,189,711,233,709,238,582,195"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="834,240,941,265"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="605,189,821,235,820,240,604,195"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="965,240,1039,265"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="606,187,618,189,783,211,952,237,951,243,783,217,618,195,606,193"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="159,313,237,339"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="201,266,201,300,195,300,195,266"/>
+<area shape="poly" id="edge12_Node000012_Node000002" title=" " alt="" coords="665,121,585,163,583,158,663,116"/>
+<area shape="rect" id="Node000013" href="$CStringHelper_8h.html" title="Namespace containing C sequence handling functions." alt="" coords="630,167,753,192"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="690,119,692,153,687,153,684,119"/>
+<area shape="rect" id="Node000014" href="$macros_8h.html" title="Header containing C sequence macros." alt="" coords="777,167,859,192"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="708,116,786,158,783,162,706,121"/>
+</map>
