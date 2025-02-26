@@ -1,0 +1,8 @@
+ros-rolling-rmw-desert (1.0.1-1bookworm) bookworm; urgency=high
+
+  * Initial package release
+  * Contributors: dcostan, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Tue, 25 Feb 2025 23:00:00 -0000
+
+
