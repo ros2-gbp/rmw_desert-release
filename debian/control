@@ -1,0 +1,12 @@
+Source: ros-jazzy-rmw-desert
+Section: misc
+Priority: optional
+Maintainer: Davide Costa <davide.cst00@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake-ros, ros-jazzy-rcpputils, ros-jazzy-rcutils, ros-jazzy-rmw, ros-jazzy-rmw-dds-common, ros-jazzy-rosidl-cmake, ros-jazzy-rosidl-runtime-c, ros-jazzy-rosidl-typesupport-introspection-c, ros-jazzy-rosidl-typesupport-introspection-cpp, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-rmw-desert
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-ament-cmake, ros-jazzy-rcpputils, ros-jazzy-rcutils, ros-jazzy-rmw, ros-jazzy-rmw-dds-common, ros-jazzy-rosidl-cmake, ros-jazzy-rosidl-runtime-c, ros-jazzy-rosidl-typesupport-introspection-c, ros-jazzy-rosidl-typesupport-introspection-cpp, ros-jazzy-ros-workspace
+Description: Implement the ROS middleware interface using the DESERT protocol stack for underwater communications.
