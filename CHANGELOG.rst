@@ -2,9 +2,12 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.0 (2025-03-10)
+------------------
+* Bump to second major release for Jazzy and Rolling
+
 1.0.3 (2025-03-07)
 ------------------
-* Backported to Humble
 * Solved all compilation warnings
 * Upgraded CXX standard to 17
 * Contributors: dcostan, matlin
