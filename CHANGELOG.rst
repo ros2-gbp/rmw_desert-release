@@ -2,6 +2,11 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2025-03-17)
+------------------
+* Added rmw_event_type_is_supported
+* Contributors: matlin
+
 2.0.1 (2025-03-15)
 ------------------
 * Fixed missing discovery thread join
