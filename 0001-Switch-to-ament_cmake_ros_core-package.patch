@@ -1,4 +1,4 @@
-From 420a289294e2940d8058937b547807ad560a90ff Mon Sep 17 00:00:00 2001
+From 9c45ac7c254004e4041fa906cc5b14ec2013d4bd Mon Sep 17 00:00:00 2001
 From: Scott K Logan <logans@cottsay.net>
 Date: Fri, 18 Apr 2025 21:11:05 -0500
 Subject: [PATCH] Switch to ament_cmake_ros_core package
