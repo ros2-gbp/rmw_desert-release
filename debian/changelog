@@ -1,0 +1,49 @@
+ros-kilted-rmw-desert (3.0.1-1noble) noble; urgency=high
+
+  * Switch to target_link_libraries for linking
+  * Updated documentation
+  * Changed RxStream dispatchment paradigm
+  * Solved segfault on rmw_wait
+  * Switch to ament_cmake_ros_core package
+  * Switch to ament_cmake_ros_core package
+  * Contributors: Scott K Logan, dcostan
+
+ -- Davide Costa <davide.cst00@gmail.com>  Wed, 21 May 2025 00:00:00 -0000
+
+ros-kilted-rmw-desert (3.0.0-1noble) noble; urgency=high
+
+  * Added rmw_event_type_is_supported
+  * Fixed missing discovery thread join
+  * Contributors: Davide Costa, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Mon, 17 Mar 2025 00:00:00 -0000
+
+ros-kilted-rmw-desert (2.0.0-1noble) noble; urgency=high
+
+  * Bump to second major release for Jazzy and Rolling
+
+ -- Davide Costa <davide.cst00@gmail.com>  Mon, 10 Mar 2025 00:00:00 -0000
+
+ros-kilted-rmw-desert (1.0.3-1noble) noble; urgency=high
+
+  * Solved all compilation warnings
+  * Upgraded CXX standard to 17
+  * Contributors: dcostan, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Fri, 07 Mar 2025 00:00:00 -0000
+
+ros-kilted-rmw-desert (1.0.2-1noble) noble; urgency=high
+
+  * Removed circular dependancies
+  * Contributors: matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Tue, 04 Mar 2025 00:00:00 -0000
+
+ros-kilted-rmw-desert (1.0.1-1noble) noble; urgency=high
+
+  * Initial package release
+  * Contributors: dcostan, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Wed, 26 Feb 2025 00:00:00 -0000
+
+
