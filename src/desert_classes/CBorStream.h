@@ -253,11 +253,6 @@ class RxStream
     RxStream(uint8_t stream_type, std::string stream_name, uint8_t stream_identifier);
     
    /**
-    * @brief Destroy the reception stream
-    */
-    ~RxStream();
-    
-   /**
     * @brief Check if there are data
     *
     * A map contains the information received for all topics and services, 
@@ -390,34 +385,6 @@ class RxStream
       return *this;
     }
     
-    
-   /**
-    * @brief Get the stream type of a specific instance
-    * @return Type of the stream
-    */
-    uint8_t get_type() const;
-   /**
-    * @brief Get the topic name of a specific instance
-    * @return Topic name of the stream
-    */
-    std::string get_name() const;
-   /**
-    * @brief Get the stream identifier of a specific instance
-    * @return Topic identifier of the stream
-    */
-    uint8_t get_identifier() const;
-    
-   /**
-    * @brief Add a packet to _received_packets
-    *
-    * When interpret_packets() is called is read all the currently active RxStream
-    * instances, and uses this function to enqueue a packet if the stream matches the
-    * type and the topic.
-    *
-    * @param packet The packet to add
-    */
-    void push_packet(std::vector<std::pair<void *, int>> packet);
-    
    /**
     * @brief Interpret raw packets and splits them into different communication types
     *
@@ -433,13 +400,14 @@ class RxStream
     uint8_t _stream_identifier;
     
     size_t _buffered_iterator;
-    
-    // packets: <packet <field, field_type>>
     std::vector<std::pair<void *, int>> _buffered_packet;
-    CircularQueue<std::vector<std::pair<void *, int>>, MAX_BUFFER_CAPACITY> _received_packets;
     
-    static const std::map<int, int> _stream_type_match_map;
-    static std::vector<RxStream *> _listening_streams;
+    // <topic, packets <packet <field, field_type>>>
+    static std::map<uint32_t, CircularQueue<std::vector<std::pair<void *, int>>, MAX_BUFFER_CAPACITY>> _interpreted_publications;
+    // <service, packets <packet <field, field_type>>>
+    static std::map<uint32_t, CircularQueue<std::vector<std::pair<void *, int>>, MAX_BUFFER_CAPACITY>> _interpreted_requests;
+    // <service + id, packets <packet <field, field_type>>>
+    static std::map<uint32_t, CircularQueue<std::vector<std::pair<void *, int>>, MAX_BUFFER_CAPACITY>> _interpreted_responses;
     
     union _cbor_value {
 	int8_t i8;

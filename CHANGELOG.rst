@@ -2,23 +2,11 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.0.3 (2025-05-21)
-------------------
-* Switch to target_link_libraries for linking
-* Updated documentation
-* Changed RxStream dispatchment paradigm
-* Solved segfault on rmw_wait
-* Contributors: dcostan
-
-2.0.2 (2025-03-17)
+3.0.0 (2025-03-17)
 ------------------
 * Added rmw_event_type_is_supported
-* Contributors: matlin
-
-2.0.1 (2025-03-15)
-------------------
 * Fixed missing discovery thread join
-* Contributors: Davide Costa
+* Contributors: Davide Costa, matlin
 
 2.0.0 (2025-03-10)
 ------------------
