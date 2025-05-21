@@ -2,18 +2,21 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.0.0 (2025-03-17)
+1.0.5 (2025-05-21)
 ------------------
-* Added rmw_event_type_is_supported
-* Fixed missing discovery thread join
-* Contributors: Davide Costa, matlin
+* Updated documentation
+* Changed RxStream dispatchment paradigm
+* Solved segfault on rmw_wait
+* Contributors: dcostan
 
-2.0.0 (2025-03-10)
+1.0.4 (2025-03-15)
 ------------------
-* Bump to second major release for Jazzy and Rolling
+* Fixed missing discovery thread join
+* Contributors: Davide Costa
 
 1.0.3 (2025-03-07)
 ------------------
+* Backported to Humble
 * Solved all compilation warnings
 * Upgraded CXX standard to 17
 * Contributors: dcostan, matlin
