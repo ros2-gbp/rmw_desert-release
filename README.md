@@ -1,3 +1,26 @@
+## rmw_desert (rolling) - 4.0.0-1
+
+The packages in the `rmw_desert` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling rmw_desert` on `Wed, 21 May 2025 13:04:24 -0000`
+
+The `rmw_desert` package was released.
+
+Version of package(s) in repository `rmw_desert`:
+
+- upstream repository: https://github.com/signetlabdei/rmw_desert.git
+- release repository: https://github.com/ros2-gbp/rmw_desert-release.git
+- rosdistro version: `3.0.0-2`
+- old version: `3.0.0-2`
+- new version: `4.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## rmw_desert (kilted) - 3.0.1-1
 
 The packages in the `rmw_desert` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --new-track --rosdistro kilted --track kilted rmw_desert` on `Wed, 21 May 2025 12:47:09 -0000`
