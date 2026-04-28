@@ -1,0 +1,56 @@
+ros-rolling-rmw-desert (4.0.1-3resolute) resolute; urgency=high
+
+  * Added get_service_endpoint_info
+  * Contributors: matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Wed, 21 Jan 2026 06:00:00 -0000
+
+ros-rolling-rmw-desert (4.0.0-3resolute) resolute; urgency=high
+
+  * Switch to target_link_libraries for linking
+  * Updated documentation
+  * Changed RxStream dispatchment paradigm
+  * Solved segfault on rmw_wait
+  * Switch to ament_cmake_ros_core package
+  * Switch to ament_cmake_ros_core package
+  * Contributors: Scott K Logan, dcostan
+
+ -- Davide Costa <davide.cst00@gmail.com>  Wed, 21 May 2025 05:00:00 -0000
+
+ros-rolling-rmw-desert (3.0.0-3resolute) resolute; urgency=high
+
+  * Added rmw_event_type_is_supported
+  * Fixed missing discovery thread join
+  * Contributors: Davide Costa, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Mon, 17 Mar 2025 05:00:00 -0000
+
+ros-rolling-rmw-desert (2.0.0-3resolute) resolute; urgency=high
+
+  * Bump to second major release for Jazzy and Rolling
+
+ -- Davide Costa <davide.cst00@gmail.com>  Mon, 10 Mar 2025 05:00:00 -0000
+
+ros-rolling-rmw-desert (1.0.3-3resolute) resolute; urgency=high
+
+  * Solved all compilation warnings
+  * Upgraded CXX standard to 17
+  * Contributors: dcostan, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Fri, 07 Mar 2025 06:00:00 -0000
+
+ros-rolling-rmw-desert (1.0.2-3resolute) resolute; urgency=high
+
+  * Removed circular dependancies
+  * Contributors: matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Tue, 04 Mar 2025 06:00:00 -0000
+
+ros-rolling-rmw-desert (1.0.1-3resolute) resolute; urgency=high
+
+  * Initial package release
+  * Contributors: dcostan, matlin
+
+ -- Davide Costa <davide.cst00@gmail.com>  Wed, 26 Feb 2025 06:00:00 -0000
+
+
