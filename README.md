@@ -1,3 +1,26 @@
+## rmw_desert (lyrical) - 4.0.2-1
+
+The packages in the `rmw_desert` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release --rosdistro lyrical rmw_desert` on `Wed, 24 Jun 2026 14:03:29 -0000`
+
+The `rmw_desert` package was released.
+
+Version of package(s) in repository `rmw_desert`:
+
+- upstream repository: https://github.com/signetlabdei/rmw_desert.git
+- release repository: https://github.com/ros2-gbp/rmw_desert-release.git
+- rosdistro version: `4.0.1-4`
+- old version: `4.0.1-4`
+- new version: `4.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## rmw_desert (rolling) - 4.0.2-1
 
 The packages in the `rmw_desert` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling rmw_desert` on `Mon, 04 May 2026 10:09:29 -0000`
