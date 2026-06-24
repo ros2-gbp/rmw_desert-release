@@ -1,8 +1,8 @@
 # ----------------------------------------------------------------------------------
-# This script depicts a very simple but complete stack in which two nodes send data
+# This script depicts a very simple but complete stack in which multiple nodes send data
 # to a common sink. The second node is used by the first one as a relay to send data to the sink.
 # The routes are configured by using UW/STATICROUTING.
-# The application used to generate data is UW/CBR.
+# The application used to generate data is UW/APPLICATION.
 # ----------------------------------------------------------------------------------
 # Stack
 #             Node 1                         Node 2                        Sink
@@ -41,15 +41,11 @@ load libmphy.so
 load libmmac.so
 load libUwmStd.so
 load libuwcsmaaloha.so
-load libuwinterference.so
 load libuwip.so
 load libuwstaticrouting.so
 load libuwmll.so
 load libuwudp.so
 load libuwapplication.so
-load libUwmStdPhyBpskTracer.so
-load libuwphy_clmsgs.so
-load libuwstats_utilities.so
 load libuwphysical.so
 
 #############################
@@ -119,9 +115,9 @@ for {set k 0} {$k < $opt(rngstream)} {incr k} {
 
 
 if {$opt(trace_files)} {
-    set opt(tracefilename) "./test_uwApplication.tr"
+    set opt(tracefilename) "./test_uwApplicationTCP.tr"
     set opt(tracefile) [open $opt(tracefilename) w]
-    set opt(cltracefilename) "./test_uwApplication.cltr"
+    set opt(cltracefilename) "./test_uwApplicationTCP.cltr"
     set opt(cltracefile) [open $opt(tracefilename) w]
 } else {
     set opt(tracefilename) "/dev/null"
