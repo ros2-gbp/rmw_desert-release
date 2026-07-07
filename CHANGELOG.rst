@@ -2,28 +2,30 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.0.2 (2026-07-07)
+2.0.4 (2026-07-07)
 ------------------
 * Update README.md
 * Add support for ROS_ALLOWED_TOPICS_CONFIG environment variable in configuration loading
 * Add option to use env variable
 * Contributors: Magform, dcostan
 
-3.0.1 (2025-05-21)
+2.0.3 (2025-05-21)
 ------------------
 * Switch to target_link_libraries for linking
 * Updated documentation
 * Changed RxStream dispatchment paradigm
 * Solved segfault on rmw_wait
-* Switch to ament_cmake_ros_core package
-* Switch to ament_cmake_ros_core package
-* Contributors: Scott K Logan, dcostan
+* Contributors: dcostan
 
-3.0.0 (2025-03-17)
+2.0.2 (2025-03-17)
 ------------------
 * Added rmw_event_type_is_supported
+* Contributors: matlin
+
+2.0.1 (2025-03-15)
+------------------
 * Fixed missing discovery thread join
-* Contributors: Davide Costa, matlin
+* Contributors: Davide Costa
 
 2.0.0 (2025-03-10)
 ------------------
