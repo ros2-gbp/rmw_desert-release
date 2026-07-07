@@ -1,3 +1,26 @@
+## rmw_desert (humble) - 1.0.6-1
+
+The packages in the `rmw_desert` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble rmw_desert` on `Tue, 07 Jul 2026 09:31:39 -0000`
+
+The `rmw_desert` package was released.
+
+Version of package(s) in repository `rmw_desert`:
+
+- upstream repository: https://github.com/signetlabdei/rmw_desert.git
+- release repository: https://github.com/ros2-gbp/rmw_desert-release.git
+- rosdistro version: `1.0.5-1`
+- old version: `1.0.5-1`
+- new version: `1.0.6-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## rmw_desert (jazzy) - 2.0.4-1
 
 The packages in the `rmw_desert` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy rmw_desert` on `Tue, 07 Jul 2026 09:08:36 -0000`
