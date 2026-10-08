@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(rmw_desert)
 
@@ -11,7 +11,8 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic -pthread)
 endif()
 
-find_package(ament_cmake_ros REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_ros_core REQUIRED)
 
 find_package(rmw REQUIRED)
 find_package(rmw_dds_common REQUIRED)
@@ -31,10 +32,12 @@ add_library(rmw_desert
   src/qos_profiles.cpp
   src/rmw.cpp
   src/get_topic_names_and_types.cpp
+  src/dynamic_message_type_support.cpp
   src/init_options.cpp
   src/features.cpp
   src/get_topic_endpoint_info.cpp
   src/get_network_flow_endpoints.cpp
+  src/get_service_endpoint_info.cpp
   src/event.cpp
   src/get_service_names_and_types.cpp
   src/desert_classes/DesertNode.cpp
@@ -61,17 +64,28 @@ add_library(rmw_desert
 INCLUDE (FindPkgConfig)
 
 # specific order: dependents before dependencies
-ament_target_dependencies(rmw_desert
-  rmw
-  rcutils
-  rcpputils
-  rmw_dds_common
-  rosidl_typesupport_introspection_c
-  rosidl_typesupport_introspection_cpp
-  rosidl_runtime_c
+target_link_libraries(rmw_desert PUBLIC
+  rmw::rmw
+  rcutils::rcutils
+  rcpputils::rcpputils
+  rmw_dds_common::rmw_dds_common_library
+  rosidl_typesupport_introspection_c::rosidl_typesupport_introspection_c
+  rosidl_typesupport_introspection_cpp::rosidl_typesupport_introspection_cpp
+  rosidl_runtime_c::rosidl_runtime_c
 )
 
 configure_rmw_library(rmw_desert)
+
+# Fix for -fvisibility-inlines-hidden
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  set_target_properties(rmw_desert PROPERTIES
+    COMPILE_FLAGS "-fvisibility=hidden"
+  )
+
+  target_compile_options(rmw_desert PRIVATE
+    "$<$<COMPILE_LANGUAGE:CXX>:-fvisibility-inlines-hidden>"
+  )
+endif()
 
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
@@ -81,13 +95,15 @@ PRIVATE "rmw_desert_BUILDING_LIBRARY")
 # specific order: dependents before dependencies
 ament_export_libraries(rmw_desert)
 
-ament_export_dependencies(rcutils)
-ament_export_dependencies(rcpputils)
-ament_export_dependencies(rmw)
-ament_export_dependencies(rosidl_runtime_c)
-ament_export_dependencies(rmw_dds_common)
-ament_export_dependencies(rosidl_typesupport_introspection_c)
-ament_export_dependencies(rosidl_typesupport_introspection_cpp)
+ament_export_dependencies(
+  rcutils
+  rcpputils
+  rmw
+  rosidl_runtime_c
+  rmw_dds_common
+  rosidl_typesupport_introspection_c
+  rosidl_typesupport_introspection_cpp
+)
 
 register_rmw_implementation(
   "c:rosidl_typesupport_c:rosidl_typesupport_introspection_c"

@@ -2,28 +2,45 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.6 (2026-07-07)
+4.0.3 (2026-10-08)
+------------------
+* Replaced deprecated calls to comply with latest C++
+* Contributors: dcostan
+
+4.0.2 (2026-05-04)
 ------------------
 * Update README.md
 * Add support for ROS_ALLOWED_TOPICS_CONFIG environment variable in configuration loading
 * Add option to use env variable
 * Contributors: Magform, dcostan
 
-1.0.5 (2025-05-21)
+4.0.1 (2026-01-21)
 ------------------
+* Added get_service_endpoint_info
+* Contributors: matlin
+
+4.0.0 (2025-05-21)
+------------------
+* Switch to target_link_libraries for linking
 * Updated documentation
 * Changed RxStream dispatchment paradigm
 * Solved segfault on rmw_wait
-* Contributors: dcostan
+* Switch to ament_cmake_ros_core package
+* Switch to ament_cmake_ros_core package
+* Contributors: Scott K Logan, dcostan
 
-1.0.4 (2025-03-15)
+3.0.0 (2025-03-17)
 ------------------
+* Added rmw_event_type_is_supported
 * Fixed missing discovery thread join
-* Contributors: Davide Costa
+* Contributors: Davide Costa, matlin
+
+2.0.0 (2025-03-10)
+------------------
+* Bump to second major release for Jazzy and Rolling
 
 1.0.3 (2025-03-07)
 ------------------
-* Backported to Humble
 * Solved all compilation warnings
 * Upgraded CXX standard to 17
 * Contributors: dcostan, matlin
