@@ -2,6 +2,11 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.3 (2026-10-08)
+------------------
+* Replaced deprecated calls to comply with latest C++
+* Contributors: dcostan
+
 4.0.2 (2026-05-04)
 ------------------
 * Update README.md
