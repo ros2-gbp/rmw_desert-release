@@ -1,0 +1,75 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        container:
+          - silkeh/clang:12
+          - silkeh/clang:13
+          - gcc:10
+          - gcc:11
+        crypto:
+          - sodium
+          - monocypher
+          - tinycrypt
+          - mbedtls
+          - c25519
+        include:
+          - crypto: sodium
+            crypto_script: true
+          - crypto: monocypher
+            crypto_script: >-
+              git clone https://github.com/LoupVaillant/Monocypher.git ../Monocypher &&
+              bash -c "cd ../Monocypher && make -j USE_ED25519=1"
+          - crypto: tinycrypt
+            crypto_script: >-
+              git clone https://github.com/intel/tinycrypt ../tinycrypt &&
+              bash -c 'cd ../tinycrypt && make -j all'
+          - crypto: mbedtls
+            crypto_script: true
+          - crypto: c25519
+            crypto_script: >-
+              apt install -y unzip &&
+              wget https://www.dlbeer.co.nz/downloads/c25519-2017-10-05.zip -O ../c25519.zip &&
+              bash -c 'cd .. && unzip c25519.zip'
+
+          - container: silkeh/clang:12
+            CC: clang
+          - container: silkeh/clang:13
+            CC: clang
+          - container: gcc:10
+            CC: gcc
+          - container: gcc:11
+            CC: gcc
+
+    container: ${{ matrix.container }}
+    env:
+      CRYPTO: ${{ matrix.crypto }}
+      CC: ${{ matrix.CC }}
+      MBEDTLS_LIB: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+      MONOCYPHER_LOCAL: 1
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install packages
+      run: apt update && apt install -y build-essential pkg-config libcunit1-dev wget libsodium-dev libmbedtls-dev ca-certificates meson ninja-build
+
+    - name: clone nanocbor
+      run: git clone https://github.com/bergzand/nanocbor/ ../nanocbor
+
+    - name: build nanocbor
+      run: cd ../nanocbor && mkdir bin && meson . build  && ninja -C build && mv build/libnanocbor.so bin/libnanocbor.so
+
+    - name: ${{ matrix.crypto }} setup script
+      run: ${{ matrix.crypto_script }}
+
+    - name: build & test libcose with ${{ matrix.crypto }}
+      run: make clean test

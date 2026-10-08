@@ -2,10 +2,11 @@
 Changelog for package rmw_desert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.0.3 (2026-10-08)
+5.0.0 (2026-10-08)
 ------------------
+* Implemented the security layer with libcose
 * Replaced deprecated calls to comply with latest C++
-* Contributors: dcostan
+* Contributors: Dmytro Ochkas, dcostan
 
 4.0.2 (2026-05-04)
 ------------------
